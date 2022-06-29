@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
-            $table->string('image_url');
+            $table->string('image_url')->nullable(true);
             $table->softDeletes();
             $table->foreignId('category_id')->references('id')->on('product_categories');
             $table->timestamps();
